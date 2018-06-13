@@ -3,12 +3,13 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-
-header {
   background-image: url('../img/layout/background.jpg');
   background-repeat:no-repeat;
   background-size:100%;
+}
+
+header {
+  
   text-align: center;
   color:#fcf064;
   font-size: 3em;
@@ -41,6 +42,8 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color:rgba(128, 128, 128, 0.20);
+  color:white;
 }
 
 @media (min-width: 0px) {
@@ -97,6 +100,11 @@ main {
     .genieTalk {
         left:62%
     } 
+  }
+  @media (max-width: 824px) {
+    body{
+      background-image: url('../img/layout/background2.jpg');
+    }
   }
 @media (min-width: 885px) {
   .genieTalk {
