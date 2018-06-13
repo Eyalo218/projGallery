@@ -7,6 +7,9 @@ var gProj = [
     publishedAt: new Date(), labels: ['Matrixes', 'keyboard events','2D Real Time game']},
     { id: 'bookstore', name: 'Book Store', title: 'Best way to find your new favorite book', 
     desc: 'Website to manage book store', url: 'projs/BookStore/', 
+    publishedAt: new Date(), labels: ['Bootstrap', 'Jquery','Modals']},
+    { id: 'guessme', name: 'Guess Me', title: 'I can guess who you\'re thinking off', 
+    desc: 'guesses who you\'re thinking off and will learn from his mistakes', url: 'projs/GuessMe/', 
     publishedAt: new Date(), labels: ['Bootstrap', 'Jquery','Modals']}
 ];
 
