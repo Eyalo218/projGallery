@@ -52,13 +52,15 @@ function generateModal(proj){
                   <li>Date: ${time}</li>
                 </ul>
                  
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                <i class="fa fa-times"></i>
+                    Close Project
+                </button>
                 <a target="_blank" href="${proj.url}index.html">
                 <button class="btn btn-primary view-project" type="button">
+                    Enter Project &#128269
                 </button>
                 </a>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
               </div>
             </div>
           </div>

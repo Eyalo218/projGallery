@@ -1,0 +1,7 @@
+TDL for the gallery (to make it a real gallery):
+
+solve the mini bug in pacman when eating a food before the other food's effect ends.
+mine sweeper, change flag to right mouse button click, and open all the bombs once you lost.
+akinator - fix the looks of the button part of the game.
+book store - add authentication and such.
+
