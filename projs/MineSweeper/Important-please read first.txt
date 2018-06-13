@@ -1,0 +1,7 @@
+I missed the part that i needed to put flag with Right click, and i used the CTRL + leftCLick instead.
+(noticed till it was late to fix it)
+to put flag, hold the ctrl button and normal click..
+also i wrote a comment about that just above the cellCLicked function (just incase you'll miss that one);
+to win - put flags on all the mines.
+
+Thank you and sorry =D

@@ -1,0 +1,50 @@
+body {
+    width:70%;
+    margin: 0 auto;
+}
+
+.bookImg{
+    width:70px;
+    transition: 1.25s;
+}
+
+.bookImg:hover{
+    width:150px;
+}
+
+
+.tableHead{
+    cursor: pointer;
+
+}
+.tableHead:hover{
+    background-color: rgba(0, 0, 0, 0.555)!important;
+}
+.header>.display-3{
+    margin:50px auto;
+    text-align:center;
+}
+
+.readContent{
+    /* display:flex;
+    flex-direction: column;
+    justify-content: center; */
+    margin-left:100px;
+    
+}
+.readContent img{
+    width:175px;
+    display: block;
+    margin-left:15%;
+}
+
+.likes{
+    display:flex;
+    justify-content: center;
+    margin-top:20px;
+    justify-content: space-around;
+}
+
+.addBook{
+    margin-bottom:5px;
+}

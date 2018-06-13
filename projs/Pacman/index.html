@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pacman</title>
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:600" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body onload="init()" onkeydown="movePacman(event)">
+  <header>
+    <h1>Pacman game! </h1>
+    <h3>Score:
+      <span>0</span>
+    </h3>
+  </header>
+  <div class="boardContainer">
+  </div>
+  <div class="buttonContainer">
+    <button class="newGame" onclick="init()">Play Again</button>
+  </div>
+
+  <div class="footer"></div>
+
+  <script src="js/general.js"></script>
+  <script src="js/tryForEach.js"></script>
+  <script src="js/pacman.js"></script>
+  <script src="js/ghosts.js"></script>
+  <script src="js/game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mines Sweeper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Miltonian" rel="stylesheet">
+</head>
+
+<body onload="initGame()">
+    <h1>Mine Sweeper</h1>
+    <div class="levels">
+        <span class='easy'>
+            Beginner
+            <input class='radioClass' type="radio" name="Level" checked
+            id="easyLevel" onclick="setLevel()">
+        </span>
+        <span class='medium'>
+            Medium
+            <input class='radioClass' type="radio" name="Level" 
+            id="mediumLevel" onclick="setLevel()">
+        </span>
+        <span class='hard'>
+            Expert
+            <input class='radioClass' type="radio" name="Level" 
+            id="hardLevel" onclick="setLevel()">
+        </span>
+    </div>
+    
+    <div class="counters">
+        <span class="flagCounter">
+            flags left
+        </span>
+        <img src="imgs/normal.bmp" class="smiley"/>
+        <span class="timer">
+            00:00:00
+        </span>
+    </div>
+    <table>
+        <tbody class="board"></tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
