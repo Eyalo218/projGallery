@@ -1,29 +1,21 @@
 'use strict';
 
-var gQuestsTree;
-var gCurrQuest;
-var gPrevQuest = null;
-var gLastRes = null;
 
 $(document).ready(init);
 
 function init() {
-    gQuestsTree = createQuest('Male?');
-
-    gQuestsTree.yes = createQuest('Gandhi');
-    gQuestsTree.no = createQuest('Rita');
-
-    gCurrQuest = gQuestsTree;
+    setGame();
 }
 
 function startGuessing() {
-    // TODO: hide the gameStart section
+    $('.gameStart').hide();
     renderQuest();
-    // TODO: show the gameQuest section
+    $('.genieTalk').text('And my be question is gonna be: ')
+    $('.gameQuest').show();
 }
 
 function renderQuest() {
-    // TODO: select the <h2> inside gameQuest and update its text by the currQuest text
+    $('.gameQuest>h2').text(gCurrQuest.txt)  // TODO: select the <h2> inside gameQuest and update its text by the currQuest text
 }
 
 function userResponse(res) {
@@ -31,21 +23,29 @@ function userResponse(res) {
     // If this node has no children
     if (isChildless(gCurrQuest)) {
         if (res === 'yes') {
-            alert('Yes, I knew it!');
-            // TODO: improve UX
+            $('.genieTalk').text('Woohoo! I knew im gonna be right ')
+            $('.gameQuest').hide();
+            restartGame();
         } else {
-            alert('I dont know...teach me!')
-            // TODO: hide and show gameNewQuest section
+            $('.genieTalk').text('Hmm, Please teach me who it was')
+            $('.gameQuest').hide();
+            $('.gameNewQuest').show();
         }
     } else {
-        // TODO: update the prev, curr and res global vars
+        gPrevQuest = gCurrQuest;
+        gCurrQuest= gCurrQuest[res];
+        gLastRes=res;
         renderQuest();
     }
 }
 
 function addGuess() {
+    gPrevQuest[gLastRes] = createQuest($('#newQuest').val());
+    gPrevQuest[gLastRes].yes = createQuest($('#newGuess').val());
+    gPrevQuest[gLastRes].no = gCurrQuest;
     // TODO: create 2 new Quests based on the inputs' values
     // TODO: connect the 2 Quests to the quetsions tree
+    saveToStorage(getQuests());
     restartGame();
 }
 
@@ -55,6 +55,7 @@ function createQuest(txt) {
         yes: null,
         no: null
     }
+    
 }
 
 function restartGame() {

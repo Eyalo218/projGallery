@@ -741,3 +741,10 @@ fieldset[disabled] .btn-xl:hover {
     color: #fed136;
     background-color: white;
 }
+
+.navbar-shrink .nav-link{
+    color: white !important
+}
+.nav-item {
+    text-align: right;
+}
