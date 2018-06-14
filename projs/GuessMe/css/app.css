@@ -105,6 +105,9 @@ main {
     body{
       background-image: url('../img/layout/background2.jpg');
     }
+    main{
+      color:black;
+    }
   }
 @media (min-width: 885px) {
   .genieTalk {

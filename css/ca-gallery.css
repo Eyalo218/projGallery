@@ -85,7 +85,7 @@ body {
     position: fixed;
     height: 100%;
     z-index: 100000;
-    background: red;
+    background: whitesmoke;
     width: 30vw;
     left: -30vw;
     transition: all 0.3s ease;
@@ -747,4 +747,8 @@ fieldset[disabled] .btn-xl:hover {
 }
 .nav-item {
     text-align: right;
+}
+
+.contactHeader{
+    margin-bottom: 40px;
 }
