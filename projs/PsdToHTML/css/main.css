@@ -1,0 +1,101 @@
+/* Font Face */
+@font-face{
+    src:url('../fonts/Lato-Regular.ttf');
+    font-family:'lato';
+}
+@font-face{
+    src:url('../fonts/eurof-regular.ttf');
+    font-family:'eurof';
+}
+
+/* global */
+
+* {
+    box-sizing:border-box
+}
+
+html {
+    /* fonts */
+    font-family: 'lato';
+    font-size:16px;
+}
+
+body {
+    margin:0;
+}
+
+header{
+    width:100%;
+    height: 130px;
+    background-color:#292929;
+    border-bottom:solid 5px #1e1e1e; 
+}
+
+main{
+    width:80%;
+    margin: 0 auto;
+}
+
+
+/* helpers */
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.navbar{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar ul{
+}
+
+.navbar li{
+    display:flex;
+    width: 130px;
+    height:130px;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 1px #1e1e1e;
+    border-left: solid 1px #1e1e1e;
+    color:white;
+    text-shadow: 0 1px 0 #1e1e1e;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    
+}
+
+.navbar .logo{
+    font-family: 'eurof';
+    font-size: 40px;
+    color:white;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    
+}
+.navbar .logo span {
+    color: #58c93a;
+}
+
+.blog-title{
+    /* Style for "Duis aute" */
+    width: 386px;
+    height: 51px;
+    color: #4f4e4e;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.84px;
+}
+
+.blog-container{
+    flex-direction: row;
+}
