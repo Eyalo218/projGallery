@@ -50,6 +50,7 @@ function updateBook(ev, id) {
 
 function setId() {
     var maxId = 0
+    if (gBooks=== null) return null;
     gBooks.forEach(function (book) {
         if (book.id > maxId) maxId = book.id;
     })
@@ -58,8 +59,9 @@ function setId() {
 
 function setShop() {
     gBooks = loadFromStorage();
+    console.log(gBooks);
     setId();
-    if (gBooks.length === 0) {
+    if (gBooks=== null) {
         gBooks = [
             { id: 1, name: 'Harry Potter and the Philosopher\'s Stone', price: 90, releaseDate: 1990, likes: 0 },
             { id: 2, name: 'Lord of the Rings: Fellowship of the Ring', price: 100, releaseDate: 1990, likes: 0 },
