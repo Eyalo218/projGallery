@@ -33,7 +33,7 @@
                         qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur...
                     </p>
-                    <button class="post-button">continue reading</button>
+                    <button class="post-button" onclick="openModal()">continue reading</button>
                 </div>
             </li>
             <li class="flex blog">
@@ -45,7 +45,7 @@
                         qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur...
                     </p>
-                    <button class="post-button">continue reading</button>
+                    <button class="post-button" onclick="openModal()">continue reading</button>
                 </div>
             </li>
             <li class="flex blog ">
@@ -57,10 +57,19 @@
                         qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate
                         velit esse cillum dolore eu fugiat nulla pariatur...
                     </p>
-                    <button class="post-button">continue reading</button>
+                    <button class="post-button" onclick="openModal()">continue reading</button>
                 </div>
             </li>
         </ul>
+        <div class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          
+        </div>
         <div class="navigation-buttons flex">
             <button class="navigation-button previous">previous</button>
             <button class="navigation-button next">Next</button>
@@ -80,23 +89,10 @@
 
     <script>
 
-            function toggleMenu(ev) {
-                ev.stopPropagation();
-                var elMenu = document.querySelector('.main-menu');
-                var elButton = document.querySelector('.menu-toggle');
-                console.log(elButton);
-                elMenu.classList.toggle('open');
-                elButton.classList.toggle('hidden');
-            }
 
-            function onBodyClick(ev){
-                var elMenu = document.querySelector('.main-menu');
-                if (elMenu.classList.contains('open')) toggleMenu(ev);
-                return;
-            }
         </script>
 
-    <!-- <script src="main.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
