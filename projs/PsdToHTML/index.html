@@ -4,27 +4,28 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>First thing to change</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="fonts/font awesome/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.css" />
 </head>
 
-<body>
+<body onclick="onBodyClick(event);">
     <header class="navbar flex">
-        <div class="logo">Blogin
-            <span>.</span>
+        <div class="logo">Blogin<span>.</span>
         </div>
-        <ul class="clean-list flex">
+        <ul class="clean-list flex main-menu">
             <li>Journal</li>
             <li>About</li>
             <li>Work</li>
             <li>Contact</li>
         </ul>
+        <button class="menu-toggle" onclick="toggleMenu(event)">☰</button>
     </header>
     <main>
         <ul class="blogs clean-list">
             <li class="flex blog">
-                <img src="img/village.png" />
+                <div class="img"style="background-image: url('img/village.png')"></div>
                 <div class="flex blog-text">
                     <h1 class="blog-title">Duis aute irure dolor in henderit in voluptate.</h1>
                     <p class="blog-info">
@@ -36,7 +37,7 @@
                 </div>
             </li>
             <li class="flex blog">
-                <img src="img/sunset.png" />
+                <div class="img"style="background-image: url('img/sunset.png')"></div>
                 <div class="flex blog-text">
                     <h1 class="blog-title">Duis aute irure dolor in henderit in voluptate.</h1>
                     <p class="blog-info">
@@ -48,7 +49,7 @@
                 </div>
             </li>
             <li class="flex blog ">
-                <img src="img/wheat.png" />
+                <div class="img"style="background-image: url('img/wheat.png')"></div>
                 <div class="flex blog-text">
                     <h1 class="blog-title">Duis aute irure dolor in henderit in voluptate.</h1>
                     <p class="blog-info">
@@ -60,26 +61,42 @@
                 </div>
             </li>
         </ul>
-        <div>
-            <button></button>
-            <button></button>
+        <div class="navigation-buttons flex">
+            <button class="navigation-button previous">previous</button>
+            <button class="navigation-button next">Next</button>
         </div>
     </main>
-    <footer>
-        <h3>Blogin</h3>
-        <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</p>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+    <footer class="footer flex">
+        <h3>Blogin<span>.</span></h3>
+        <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span>Pixelhint.com</span></p>
+        <div class="social-networks flex clean-list">
+            <button class="facebook"><span class="fab fa-facebook-f"></span></button>
+            <button class="twitter"><span class="fab fa-twitter"></span></button>
+            <button class="behance"><span class="fab fa-behance"></span></button>
+            <button class="dribbble"><span class="fab fa-dribbble"></span></button>
+        </div>
     </footer>
 
 
+    <script>
 
+            function toggleMenu(ev) {
+                ev.stopPropagation();
+                var elMenu = document.querySelector('.main-menu');
+                var elButton = document.querySelector('.menu-toggle');
+                console.log(elButton);
+                elMenu.classList.toggle('open');
+                elButton.classList.toggle('hidden');
+            }
 
-    <script src="main.js"></script>
+            function onBodyClick(ev){
+                var elMenu = document.querySelector('.main-menu');
+                if (elMenu.classList.contains('open')) toggleMenu(ev);
+                return;
+            }
+        </script>
+
+    <!-- <script src="main.js"></script> -->
 </body>
 
 </html>
