@@ -45,7 +45,6 @@ function findMyPosition() {
 
 function renderWeather(weather){
     var strHTML = '';
-    // weatherService.testingMap();
     console.log("shalala",weather);
 
 }
