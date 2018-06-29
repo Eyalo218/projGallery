@@ -4,6 +4,7 @@ import locService from './services/loc.service.js'
 import mapService from './services/map.service.js'
 import weatherService from './services/weather.service.js'
 
+var currPos;
 
 document.querySelector('.find-me-btn').addEventListener('click', findMyPosition);
 
@@ -31,13 +32,14 @@ function findMyPosition() {
     console.log('OMG they killed kenny');
     locService.getPosition()
         .then(({ coords }) => {
+            currPos = { lat: coords.latitude, lng: coords.longitude };
             mapService.removeMarkers();
-            mapService.showUserLocation({ lat: coords.latitude, lng: coords.longitude });
-            locService.getLocationAddress({ lat: coords.latitude, lng: coords.longitude }).then((addressData) => {
+            mapService.showUserLocation(currPos);
+            locService.getLocationAddress(currPos).then((addressData) => {
                 console.log(addressData);
                 document.querySelector('.address').innerText = addressData.formatted_address;
             })
-            weatherService.getWeather({lat: coords.latitude, lng: coords.longitude }).then(
+            weatherService.getWeather(currPos).then(
                 (weatherData) =>{renderWeather(weatherData)}
             )
         })
