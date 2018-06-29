@@ -13,6 +13,8 @@ function getWeather(coords){
     })
 }
 
+function a(){}
+
 export default {
     getWeather
 }
