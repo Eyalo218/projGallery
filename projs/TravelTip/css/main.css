@@ -1,0 +1,9 @@
+.flex{
+    display:flex;
+}
+
+.weather{
+    height: 200px;
+    width:250px;
+    background-color:aliceblue;
+}

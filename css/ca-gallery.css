@@ -80,14 +80,15 @@ body {
 }
 .offcanvas-btn-open {
     margin-left: 30vw;
+    content: "X";
 }
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    z-index: 100000;
+    z-index: 5;
     background: whitesmoke;
     width: 30vw;
-    left: -30vw;
+    left: -50vw;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;

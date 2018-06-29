@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Eyal Ohayon</title>
+  <title>Eyal's Gallery</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,17 +33,17 @@
 
   <!-- Contact -->
   <section id="contact">
-    <h2 class="contactHeader">Contact Me</h2>
-    <label for="fname">First Name:</label><br>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+    <h2 class="contactHeader" >Contact Me</h2>
+    <label for="email">Email address:</label><br>
+    <input type="email" id="email" name="firstname" placeholder="name@example.com"><br>
 
-    <label for="lname">Last Name:</label><br>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+    <label for="subject">Last Name:</label><br>
+    <input type="text" id="subject" name="subject" placeholder="enter subject here"><br>
 
-    <label for="subject">Message:</label><br>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
+    <label for="msgBody">Message:</label><br>
+    <textarea id="msgBody" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
 
-    <input type="submit" value="Submit">
+    <button type="button" class="btn btn-primary">Submit</button>
   </section>
     
   </aside>
@@ -68,7 +68,7 @@
             <a class="nav-link js-scroll-trigger" href="#me">Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" onClick="openCanvas()">Contact</a>
           </li>
         </ul>
       </div>

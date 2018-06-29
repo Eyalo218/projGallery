@@ -108,7 +108,7 @@ footer{
 
 .previous::before{
     margin-right:5px;
-    margin-left:35px;
+    /* margin-left:35px; */
     content:"\2190"
 }
 
@@ -225,6 +225,7 @@ footer{
 
 .blog-container{
     flex-direction:column ;
+    /* justify-content: center; */
     align-content: center;
 }
 
@@ -239,9 +240,7 @@ footer{
 .blog{
     margin-top: 80px;
 }
-.blogs{
-    margin-left:20px;
-}
+
 
 .post-button{
     text-align: start;
@@ -357,6 +356,9 @@ footer{
         border-left: solid 1px #1e1e1e;
         box-shadow: inset 0 -6px 0 #1e1e1e;
         
+    }
+    .blogs{
+        margin-left:20px;
     }
 }
 
