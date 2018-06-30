@@ -1,13 +1,128 @@
+@font-face{
+    src:url('../fonts/fonts/Exo/Exo-Regular.ttf');
+    font-family:'font1';
+}
+@font-face{
+    src:url('../fonts/fonts/Roboto/Roboto-Regular.ttf');
+    font-family:'font2';
+}
+
+*{
+    box-sizing: border-box;
+}
+
 .flex{
     display:flex;
 }
 
-.weather{
-    height: 200px;
-    width:250px;
-    background-color:aliceblue;
+.column{
+    flex-direction: column;
 }
 
+html {
+    padding:0;
+    font-family:"font1";
+}
+body{
+    padding:0;
+    background-color:#f9f9f9;
+}
+.weather{
+    margin:20px 0;
+    height: 130px;
+    width:100%;
+    background-color:#232323;
+    color:#f9f9f9;
+}
+
+h1{
+    text-align: center;
+    color:#232323;
+    font-size: 2rem;
+}
 .hidden{
     display:none;
+}
+
+.map{
+        width:100%;
+        height: 350px;
+        /* border:solid 1px #262626; */
+        margin-top:1px;
+}
+
+.buttons{
+    justify-content: space-between;
+    width:100%;
+}
+
+.address{
+  text-align:center;
+  margin-bottom:20px;
+  font-family:"font2";
+  color:#811411;
+}
+
+.inserted-loc-btn{
+    margin:0;
+    padding:0;
+    height:35px;
+    width:104px;
+    background-color: #f9d15a;
+    
+}
+
+.inserted-loc{
+    margin-right:5px;
+    border-left:none;
+    width:70%;
+}
+
+.find-me-btn{
+    height:35px;
+    background-color: #74a4f1;
+} 
+
+.copy-url-btn{
+    align-self:center;
+    height:35px;
+    background-color: #54b573;
+}
+
+.center{
+    justify-content: center;
+}
+
+button{
+    font-family:'font2';  
+}
+
+.find-location{
+    width:80%;
+}
+
+span{
+    transform: rotate(20deg);
+}
+
+@media screen and (min-width: 800px) {
+    .map{
+        width:70%;
+        margin:0 auto;
+    }
+    .weather{
+        width:29%;
+        height: 350px;
+        margin:0 auto 0 5px;
+    }
+    .buttons{
+        width:70%;
+        margin:0 auto;
+    }
+    .api-container.flex{
+        flex-direction: row;
+        width:70%;
+        margin:0 auto;
+
+    }
 }

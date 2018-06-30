@@ -2,25 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <title>ES6</title>
 </head>
 
 <body>
     <input type="text" class="hidden url-holder">
-    <h1>Travel Tip</h1>
+    <h1>Travel <span>Tip</span></h1>
 
     <h3 class="address"></h3>
-    <div class="flex">
-        <div class="weather"></div>
-        <div id="map" style="width: 350px; height: 350px;"></div>
+    <div class="flex buttons">
+        <div class="flex find-location">
+            <button class="inserted-loc-btn">Find Location</button>
+            <input class="inserted-loc" type="text" placeholder="Address, City, Country">
+        </div>
+        <button class="find-me-btn">Find Me</button>
     </div>
-    <button class="find-me-btn">Find Me</button>
-    <button class="inserted-loc-btn">Find Location</button>
-    <button class="copy-url-btn">Copy Url</button>
-    <input class="inserted-loc" type="text">
+    <div class="flex column api-container">
+        <div id="map" class="map"></div>
+        <div class="weather">lalalala</div>
+    </div>
+    <div class="flex center">
+        <button class="copy-url-btn">Share Location</button>
+    </div>
 
 
     <script type="module" src="js/main.js"></script>

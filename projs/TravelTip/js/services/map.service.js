@@ -21,6 +21,7 @@ function addMarker(loc) {
     var marker = new google.maps.Marker({
         position: loc,
         map: map,
+        icon:'fonts/svg/penguin3.png',
         title: 'Hello World!'
     });
     markers.push(marker);
@@ -60,6 +61,10 @@ function removeMarkers(){
     })
 }
 
+function getMarkers(){
+    console.log('OMG THEY KILLED KENYA',markers);
+}
+
 
 
 
@@ -67,6 +72,7 @@ export default {
     initMap,
     addMarker,
     showUserLocation,
-    removeMarkers
+    removeMarkers,
+    getMarkers
 }
 

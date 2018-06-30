@@ -52,6 +52,7 @@ function setNewPosition() {
     weatherService.getWeather(currPos).then(
         (weatherData) => { renderWeather(weatherData) }
     )
+    mapService.getMarkers();
 }
 
 function renderWeather(weather) {
