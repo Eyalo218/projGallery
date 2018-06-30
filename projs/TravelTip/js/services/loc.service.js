@@ -16,14 +16,23 @@ function getPosition() {
 
 function getLocationAddress(loc) {
     return fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${loc.lat},${loc.lng}&key=${API_KEY}`)
-    .then((data) => {
-        return data.json().then((addressData) => {
-            return addressData.results[0];
-        })
-}
-    )
+        .then((data) => {
+            return data.json().then((addressData) => {
+                return addressData.results[0];
+            })
+        }
+        )
 }
 
+function getLocationByAddress(address) {
+    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${API_KEY}`)
+        .then((data) => {
+            return data.json().then((addressData) => {
+                return addressData.results[0].geometry.location
+            })
+        }
+        )
+}
 
 
 
@@ -31,5 +40,6 @@ function getLocationAddress(loc) {
 export default {
     getLocs: getLocs,
     getPosition: getPosition,
-    getLocationAddress
+    getLocationAddress,
+    getLocationByAddress
 }

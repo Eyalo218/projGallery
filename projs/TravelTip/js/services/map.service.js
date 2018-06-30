@@ -60,14 +60,13 @@ function removeMarkers(){
     })
 }
 
-function testingMap(){
-    console.log("map: ",map )
-}
+
+
+
 export default {
     initMap,
     addMarker,
     showUserLocation,
-    removeMarkers,
-    testingMap
+    removeMarkers
 }
 

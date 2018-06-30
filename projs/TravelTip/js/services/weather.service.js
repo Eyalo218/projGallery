@@ -8,9 +8,6 @@ function getWeather(coords){
         .then ((jsonWeather)=> {
             console.log(jsonWeather)
            return jsonWeather;
-           var el= document.querySelector('.link');
-           el.value="omg";
-           console.log(el);
         })
 
     })
