@@ -56,7 +56,16 @@ function setNewPosition() {
 }
 
 function renderWeather(weather) {
-    var strHTML = '';
+    console.log(weather);
+    var elWeather = document.querySelector('.weather-info');
+    var strHTML =  `
+    <h6> Weather Today</h6>
+    <img class="icon" src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png" />
+    <p>${weather.name}, ${weather.sys.country} flag, ${weather.weather[0].description}</p>
+    <p> temperatures from ${weather.main.temp_min} to ${weather.main.temp_max}°C, wind ${weather.wind.speed} m/s</p>
+    `
+    elWeather.innerHTML = strHTML;
+
 }
 
 function copyURLwithCoords() {

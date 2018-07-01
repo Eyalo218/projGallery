@@ -63,13 +63,23 @@ h1{
   color:#811411;
 }
 
+.icon{
+    height: 40px;
+    width: 40px;
+}
+
+p{
+    margin:3px 0;
+}
+h6{
+    margin:0;
+}
 .inserted-loc-btn{
     margin:0;
     padding:0;
     height:35px;
     width:104px;
-    background-color: #f9d15a;
-    
+    background-color: #f9d15a; 
 }
 
 .inserted-loc{
